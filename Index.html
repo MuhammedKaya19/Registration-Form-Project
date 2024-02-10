@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Sayfaya ad verilir-->
+     <title> Registration Form</title>
+     <!--CSS dosyası sayfaya bağlanır-->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!--Sadece tek bir ana konu olduğu için 'main' barı açılır-->
+     <main>
+          <!--Başlangıç ismini veriyoruz-->
+          <h2>REGISTRATION FORM</h2>
+
+          <!--Tek bir form yer alacağı için form elemanı oluşturulur ve 'post' metodu tanımlanır(formlardan alınan veriler bir yere gitmelidir bu yüzden metod tanımı şarttır)-->
+          <form action="" method="post"> 
+          <!--method=post : form aracılığı ile alınan verileri bir yere gönderme veya alma kaydetme-->
+
+               <!--'Section' bölme oluşturulur-->
+               <section>
+                    <!--Section içine bir label tanımlanır-->
+                    <label for="name">First Name:</label>
+                    <!--Ardından input(girdi) tanımlanır-->
+                    <input type="text" id="name" name="Fname"  placeholder="Enter Your Name">
+                    <!--label for="name" - input id="name" (First name'e tıklandığında input'a yönlendirir)-->
+                    <!--Placeholder="" boş input metni-->
+               </section>
+               <!--İlk sectionun bitişi, diğer sectionların oluşturulması-->
+               
+               <!--Soyadı sectionu oluştur-->
+               <section>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="Lname"  placeholder="Enter Your Last Name">
+               </section>
+               <!--Email sectionu oluştur-->
+               <section>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="Enter Your Last Name">
+               </section>
+               <!--Passoword sectionu oluştur-->
+               <section>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"  placeholder="Enter Your Password">
+               </section>
+               <!--Doğum tarihi sectionu oluştur-->
+               <section>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="text" id="dob" name="dob"  placeholder=" enter your date of birth">
+               </section>
+               <!--Cinsiyet sectionu oluştur-->
+               <section>
+                    <!--Label tanımla ve içine bir section oluşturup iki cinsiyet için radio değerli iki input oluştur-->
+                    <label for="gender">Gender:
+                         <section>
+                              <input type="radio" name="gender" id="gender"> Male
+                              <input type="radio" name="gender" id="gender"> Female
+                         </section>
+                    </label>
+
+               </section>
+               <!--Tel no sectionu oluştur-->
+               <section>
+                    <label for="tel">Mobile Number:</label>
+                    <input type="tel" id="tel" name="mobile" value="" placeholder="(+90)5xx xxx xx xx" maxlength="10">
+               </section>
+               <section class="button"> <!--button classı verildiği için diğer sectionlardan ayrı olarak bu sectiona ek özellik verilebilir-->
+                    <input type="submit" value="SUBMIT">
+                    <input type="reset" value="CLEAR">
+               </section>
+          </form>
+     </main>
+</body>
+</html>
